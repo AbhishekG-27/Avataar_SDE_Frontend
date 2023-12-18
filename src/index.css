@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Google Sans Regular";
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fefefe;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.main {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.slide {
+  opacity: 0;
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.7s ease-in;
+}
+.img1 {
+  opacity: 1;
+}
+.prevBtn,
+.nextBtn {
+  height: 2rem;
+  position: absolute;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  user-select: none;
+}
+.prevBtn:hover,
+.nextBtn:hover {
+  color: black;
+}
+.prevBtn {
+  left: 1rem;
+}
+.nextBtn {
+  right: 1rem;
+}
+.navbar {
+  display: flex;
+  background-color: #2f302c;
+  color: white;
+  height: 5rem;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li button {
+  color: white;
+  margin-right: 0.9rem;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 20px;
+  background: none;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+  user-select: none;
+}
+.nav ul li button:hover {
+  color: #82cef9;
+  cursor: pointer;
+}
+.heading {
+  margin: 0rem 1rem;
+  font-size: 24px;
+}
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2f302c;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.hamburger {
+  display: none;
+}
+.navInput {
+  background: none;
+  color: white;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 360px;
+  padding: 5px 2px;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+@media only screen and (max-width: 1440px) {
+  .nav ul li button {
+    margin-right: 0.5rem;
+  }
+  .main {
+    margin-top: 200px;
+    width: 700px;
+    height: 400px;
+  }
+  .crousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  .main {
+    margin-top: 300px;
+  }
+  .nav.active{
+    display: block;
+    height: 410px;
+    background-color: #2f302c;
+    z-index: 1;
+  }
+  .nav.active ul{
+    color: white;
+    opacity: 1;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .navInput {
+    display: none;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+  .line {
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    margin: 6px 13px;
+  }
+  .nav {
+    position: absolute;
+    top: 3.5rem;
+    background-color: #2f302c;
+    width: 100vw;
+    height: 0;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+  }
+  .nav ul li {
+    margin-top: 15px;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    top: -170px;
+    left: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    width: 590px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 653px) {
+  .main {
+    width: 500px;
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .main {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .main {
+    width: 350px;
+    height: 200px;
+  }
+}
